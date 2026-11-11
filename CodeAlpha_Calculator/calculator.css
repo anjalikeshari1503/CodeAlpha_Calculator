@@ -1,0 +1,121 @@
+* {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      min-height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background: linear-gradient(135deg, #141e30, #243b55);
+      font-family: Arial, sans-serif;
+    }
+
+    .calculator {
+      width: 340px;
+      padding: 22px;
+      background: #1e293b;
+      border-radius: 20px;
+      box-shadow: 0 15px 40px rgba(0,0,0,0.4);
+    }
+
+    .display {
+      width: 100%;
+      height: 110px;
+      padding: 15px;
+      margin-bottom: 20px;
+      background: #0f172a;
+      border-radius: 12px;
+      color: white;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+      align-items: flex-end;
+      overflow: hidden;
+    }
+
+    #expression {
+      font-size: 16px;
+      color: #94a3b8;
+      min-height: 24px;
+      overflow-wrap: anywhere;
+    }
+
+    #result {
+      font-size: 34px;
+      font-weight: bold;
+      overflow-wrap: anywhere;
+    }
+
+    .buttons {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 10px;
+    }
+
+    button {
+      height: 62px;
+      border: none;
+      border-radius: 12px;
+      font-size: 22px;
+      font-weight: bold;
+      cursor: pointer;
+      color: white;
+      background: #334155;
+      transition: 0.2s;
+    }
+
+    button:hover {
+      background: #475569;
+      transform: scale(1.04);
+    }
+
+    button:active {
+      transform: scale(0.95);
+    }
+
+    .operator {
+      background: #f59e0b;
+      color: #111827;
+    }
+
+    .operator:hover {
+      background: #d97706;
+    }
+
+    .clear {
+      background: #ef4444;
+    }
+
+    .clear:hover {
+      background: #dc2626;
+    }
+
+    .equal {
+      background: #22c55e;
+      grid-column: span 2;
+    }
+
+    .equal:hover {
+      background: #16a34a;
+    }
+
+    .zero {
+      grid-column: span 2;
+    }
+
+    .footer {
+      text-align: center;
+      color: #94a3b8;
+      font-size: 12px;
+      margin-top: 18px;
+    }
+
+    @media (max-width : 380px){
+        .calculator{
+            width :95%;
+            padding :15px;
+        }
+    }
